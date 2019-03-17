@@ -24,13 +24,13 @@ public class PaymentDetails implements Serializable{
 	int id;
 
 	@Column(name ="transaction_details")
-	String transaction_details;
+	String transactionDetails;
 	
 	@Column(name="spend_category")
-	String spend_category;
+	String spendCategory;
 	
 	@Column(name="amount")
-	int amount;
+	double amount;
 	
 	
 	@Column(name="date")
@@ -38,7 +38,11 @@ public class PaymentDetails implements Serializable{
 	
 	@Column(name="payment_type ")
 	String paymentType;
-
+	
+	
+	@Column(name="balance")
+	double balance;
+	
 	public int getId() {
 		return id;
 	}
@@ -47,28 +51,23 @@ public class PaymentDetails implements Serializable{
 		this.id = id;
 	}
 
-	public String getTransaction_details() {
-		return transaction_details;
+	
+
+
+	public String getTransactionDetails() {
+		return transactionDetails;
 	}
 
-	public void setTransaction_details(String transaction_details) {
-		this.transaction_details = transaction_details;
+	public void setTransactionDetails(String transactionDetails) {
+		this.transactionDetails = transactionDetails;
 	}
 
-	public String getSpend_category() {
-		return spend_category;
+	public String getSpendCategory() {
+		return spendCategory;
 	}
 
-	public void setSpend_category(String spend_category) {
-		this.spend_category = spend_category;
-	}
-
-	public int getAmount() {
-		return amount;
-	}
-
-	public void setAmount(int amount) {
-		this.amount = amount;
+	public void setSpendCategory(String spendCategory) {
+		this.spendCategory = spendCategory;
 	}
 
 	public String getDate() {
@@ -86,7 +85,22 @@ public class PaymentDetails implements Serializable{
 	public void setPaymentType(String paymentType) {
 		this.paymentType = paymentType;
 	}
-	
-	
+
+	public double getAmount() {
+		return amount;
+	}
+
+	public void setAmount(double amount) {
+		this.amount = amount;
+	}
+
+	public double getBalance() {
+		return balance;
+	}
+
+	public void setBalance(double balance) {
+		this.balance = balance;
+	}
+
 	
 }
